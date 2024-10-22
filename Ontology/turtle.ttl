@@ -1,0 +1,1847 @@
+@prefix : <http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#> .
+
+<http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasParticipant
+:hasParticipant rdf:type owl:ObjectProperty ;
+                owl:inverseOf :participatesIn ;
+                rdfs:domain :Tournaments ;
+                rdfs:range :Players .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#isSponsoredBy
+:isSponsoredBy rdf:type owl:ObjectProperty ;
+               owl:inverseOf :sponsors ;
+               rdfs:domain :Tournaments ;
+               rdfs:range :Sponsorship .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#participatesIn
+:participatesIn rdf:type owl:ObjectProperty ;
+                rdfs:domain :Players ;
+                rdfs:range :Tournaments .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#sponsors
+:sponsors rdf:type owl:ObjectProperty ;
+          rdfs:domain :Sponsorship ;
+          rdfs:range :Tournaments .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasFemaleFinalViewership
+:hasFemaleFinalViewership rdf:type owl:DatatypeProperty ;
+                          rdfs:domain :Grand_Slams ,
+                                      :Masters ,
+                                      :WTA_500 ;
+                          rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasFemaleFinalsAttendance
+:hasFemaleFinalsAttendance rdf:type owl:DatatypeProperty ;
+                           rdfs:subPropertyOf :hasFinalsAttendance ;
+                           rdfs:domain :Tournaments ;
+                           rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasFemalePrizePool
+:hasFemalePrizePool rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :hasTotalPrizePool ;
+                    rdfs:domain :Grand_Slams ,
+                                :Masters ,
+                                :WTA_500 ;
+                    rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasFinalsAttendance
+:hasFinalsAttendance rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :hasTotalAttendance ;
+                     rdfs:domain :Tournaments ;
+                     rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasMaleFinalViewership
+:hasMaleFinalViewership rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :ATP_500 ,
+                                    :Grand_Slams ,
+                                    :Masters ;
+                        rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasMaleFinalsAttendance
+:hasMaleFinalsAttendance rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf :hasFinalsAttendance ;
+                         rdfs:domain :Tournaments ;
+                         rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasMalePrizePool
+:hasMalePrizePool rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :hasTotalPrizePool ;
+                  rdfs:domain :ATP_500 ,
+                              :Grand_Slams ,
+                              :Masters ;
+                  rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasSponsorshipAmount
+:hasSponsorshipAmount rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :Minor_Sponsors ,
+                                  :Official_Sponsor ,
+                                  :Sponsorship ,
+                                  :Title_Sponsor ;
+                      rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasTotalAttendance
+:hasTotalAttendance rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Tournaments ;
+                    rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasTotalPrizePool
+:hasTotalPrizePool rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Tournaments ;
+                   rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#isFemaleTournament
+:isFemaleTournament rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Grand_Slams ,
+                                :Masters ,
+                                :WTA_500 ;
+                    rdfs:range xsd:boolean ;
+                    owl:propertyDisjointWith :isMaleTournament .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#isMaleTournament
+:isMaleTournament rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :ATP_500 ,
+                              :Grand_Slams ,
+                              :Masters ;
+                  rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#isMixedTournament
+:isMixedTournament rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Grand_Slams ,
+                               :Masters ;
+                   rdfs:range xsd:boolean .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#ATP_500
+:ATP_500 rdf:type owl:Class ;
+         rdfs:subClassOf :Tournaments .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Acapulco
+:Acapulco rdf:type owl:Class ;
+          rdfs:subClassOf :ATP_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Australian_Open
+:Australian_Open rdf:type owl:Class ;
+                 rdfs:subClassOf :Grand_Slams .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Barcelona_Open
+:Barcelona_Open rdf:type owl:Class ;
+                rdfs:subClassOf :ATP_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Basel_Open
+:Basel_Open rdf:type owl:Class ;
+            rdfs:subClassOf :ATP_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Beijing_Open
+:Beijing_Open rdf:type owl:Class ;
+              rdfs:subClassOf :ATP_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Brisbane_Open
+:Brisbane_Open rdf:type owl:Class ;
+               rdfs:subClassOf :WTA_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Charleston_Open
+:Charleston_Open rdf:type owl:Class ;
+                 rdfs:subClassOf :WTA_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Cincinnati_Open
+:Cincinnati_Open rdf:type owl:Class ;
+                 rdfs:subClassOf :Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Dubai_Duty_Free_Open
+:Dubai_Duty_Free_Open rdf:type owl:Class ;
+                      rdfs:subClassOf :ATP_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Eastborne_Open
+:Eastborne_Open rdf:type owl:Class ;
+                rdfs:subClassOf :WTA_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Female_Player
+:Female_Player rdf:type owl:Class ;
+               rdfs:subClassOf :Players ;
+               owl:disjointWith :Male_Player .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Grand_Slams
+:Grand_Slams rdf:type owl:Class ;
+             rdfs:subClassOf :Tournaments .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Halle_Open
+:Halle_Open rdf:type owl:Class ;
+            rdfs:subClassOf :ATP_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Hamburg_Open
+:Hamburg_Open rdf:type owl:Class ;
+              rdfs:subClassOf :ATP_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Indian_Wells_Open
+:Indian_Wells_Open rdf:type owl:Class ;
+                   rdfs:subClassOf :Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#London_Open
+:London_Open rdf:type owl:Class ;
+             rdfs:subClassOf :ATP_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Madrid_Open
+:Madrid_Open rdf:type owl:Class ;
+             rdfs:subClassOf :Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Male_Player
+:Male_Player rdf:type owl:Class ;
+             rdfs:subClassOf :Players .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Masters
+:Masters rdf:type owl:Class ;
+         rdfs:subClassOf :Tournaments .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Miami_Open
+:Miami_Open rdf:type owl:Class ;
+            rdfs:subClassOf :Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Minor_Sponsors
+:Minor_Sponsors rdf:type owl:Class ;
+                rdfs:subClassOf :Sponsorship .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monte_Carlo_Masters
+:Monte_Carlo_Masters rdf:type owl:Class ;
+                     rdfs:subClassOf :Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monterrey_Open
+:Monterrey_Open rdf:type owl:Class ;
+                rdfs:subClassOf :WTA_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Moskow_Open
+:Moskow_Open rdf:type owl:Class ;
+             rdfs:subClassOf :WTA_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Ningbo_Open
+:Ningbo_Open rdf:type owl:Class ;
+             rdfs:subClassOf :WTA_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Official_Sponsor
+:Official_Sponsor rdf:type owl:Class ;
+                  rdfs:subClassOf :Sponsorship .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Paris_Masters
+:Paris_Masters rdf:type owl:Class ;
+               rdfs:subClassOf :Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Players
+:Players rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Qatar_Open
+:Qatar_Open rdf:type owl:Class ;
+            rdfs:subClassOf :Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rio_De_Janeiro
+:Rio_De_Janeiro rdf:type owl:Class ;
+                rdfs:subClassOf :ATP_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Roland_Garros
+:Roland_Garros rdf:type owl:Class ;
+               rdfs:subClassOf :Grand_Slams .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rome_Open
+:Rome_Open rdf:type owl:Class ;
+           rdfs:subClassOf :Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rotterdam_Open
+:Rotterdam_Open rdf:type owl:Class ;
+                rdfs:subClassOf :ATP_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Seoul_Open
+:Seoul_Open rdf:type owl:Class ;
+            rdfs:subClassOf :WTA_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Shanghai_Masters
+:Shanghai_Masters rdf:type owl:Class ;
+                  rdfs:subClassOf :Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sponsorship
+:Sponsorship rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Strasbourg_Open
+:Strasbourg_Open rdf:type owl:Class ;
+                 rdfs:subClassOf :WTA_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Stuttgart_Open
+:Stuttgart_Open rdf:type owl:Class ;
+                rdfs:subClassOf :WTA_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sydney_Open
+:Sydney_Open rdf:type owl:Class ;
+             rdfs:subClassOf :WTA_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Title_Sponsor
+:Title_Sponsor rdf:type owl:Class ;
+               rdfs:subClassOf :Sponsorship .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tokyo_Open
+:Tokyo_Open rdf:type owl:Class ;
+            rdfs:subClassOf :WTA_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Toronto_Montreal_Open
+:Toronto_Montreal_Open rdf:type owl:Class ;
+                       rdfs:subClassOf :Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tournaments
+:Tournaments rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#US_Open
+:US_Open rdf:type owl:Class ;
+         rdfs:subClassOf :Grand_Slams .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Vienna_Open
+:Vienna_Open rdf:type owl:Class ;
+             rdfs:subClassOf :ATP_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#WTA_500
+:WTA_500 rdf:type owl:Class ;
+         rdfs:subClassOf :Tournaments .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Wimbledon
+:Wimbledon rdf:type owl:Class ;
+           rdfs:subClassOf :Grand_Slams .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Acapulco_2010
+:Acapulco_2010 rdf:type owl:NamedIndividual ,
+                        :Acapulco .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Acapulco_2011
+:Acapulco_2011 rdf:type owl:NamedIndividual ,
+                        :Acapulco .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Acapulco_2012
+:Acapulco_2012 rdf:type owl:NamedIndividual ,
+                        :Acapulco .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Acapulco_2013
+:Acapulco_2013 rdf:type owl:NamedIndividual ,
+                        :Acapulco .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Acapulco_2014
+:Acapulco_2014 rdf:type owl:NamedIndividual ,
+                        :Acapulco .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Acapulco_2015
+:Acapulco_2015 rdf:type owl:NamedIndividual ,
+                        :Acapulco .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Acapulco_2016
+:Acapulco_2016 rdf:type owl:NamedIndividual ,
+                        :Acapulco .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Acapulco_2017
+:Acapulco_2017 rdf:type owl:NamedIndividual ,
+                        :Acapulco .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Australian_Open_2010
+:Australian_Open_2010 rdf:type owl:NamedIndividual ,
+                               :Australian_Open ;
+                      :hasTotalAttendance 653860 ;
+                      :isMixedTournament "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Australian_Open_2011
+:Australian_Open_2011 rdf:type owl:NamedIndividual ,
+                               :Australian_Open ;
+                      :hasTotalAttendance 651127 ;
+                      :isMixedTournament "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Australian_Open_2012
+:Australian_Open_2012 rdf:type owl:NamedIndividual ,
+                               :Australian_Open ;
+                      :hasTotalAttendance 686006 ;
+                      :isMixedTournament "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Australian_Open_2013
+:Australian_Open_2013 rdf:type owl:NamedIndividual ,
+                               :Australian_Open ;
+                      :hasTotalAttendance 684457 ;
+                      :isMixedTournament "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Australian_Open_2014
+:Australian_Open_2014 rdf:type owl:NamedIndividual ,
+                               :Australian_Open ;
+                      :hasTotalAttendance 643280 ;
+                      :isMixedTournament "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Australian_Open_2015
+:Australian_Open_2015 rdf:type owl:NamedIndividual ,
+                               :Australian_Open ;
+                      :hasTotalAttendance 703899 ;
+                      :isMixedTournament "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Australian_Open_2016
+:Australian_Open_2016 rdf:type owl:NamedIndividual ,
+                               :Australian_Open ;
+                      :hasTotalAttendance 720363 ;
+                      :isMixedTournament "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Australian_Open_2017
+:Australian_Open_2017 rdf:type owl:NamedIndividual ,
+                               :Australian_Open ;
+                      :hasTotalAttendance 728763 ;
+                      :isMixedTournament "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Barcelona_Open_2010
+:Barcelona_Open_2010 rdf:type owl:NamedIndividual ,
+                              :Barcelona_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Barcelona_Open_2011
+:Barcelona_Open_2011 rdf:type owl:NamedIndividual ,
+                              :Barcelona_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Barcelona_Open_2012
+:Barcelona_Open_2012 rdf:type owl:NamedIndividual ,
+                              :Barcelona_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Barcelona_Open_2013
+:Barcelona_Open_2013 rdf:type owl:NamedIndividual ,
+                              :Barcelona_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Barcelona_Open_2014
+:Barcelona_Open_2014 rdf:type owl:NamedIndividual ,
+                              :Barcelona_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Barcelona_Open_2015
+:Barcelona_Open_2015 rdf:type owl:NamedIndividual ,
+                              :Barcelona_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Barcelona_Open_2016
+:Barcelona_Open_2016 rdf:type owl:NamedIndividual ,
+                              :Barcelona_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Barcelona_Open_2017
+:Barcelona_Open_2017 rdf:type owl:NamedIndividual ,
+                              :Barcelona_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Basel_Open_2010
+:Basel_Open_2010 rdf:type owl:NamedIndividual ,
+                          :Basel_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Basel_Open_2011
+:Basel_Open_2011 rdf:type owl:NamedIndividual ,
+                          :Basel_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Basel_Open_2012
+:Basel_Open_2012 rdf:type owl:NamedIndividual ,
+                          :Basel_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Basel_Open_2013
+:Basel_Open_2013 rdf:type owl:NamedIndividual ,
+                          :Basel_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Basel_Open_2014
+:Basel_Open_2014 rdf:type owl:NamedIndividual ,
+                          :Basel_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Basel_Open_2015
+:Basel_Open_2015 rdf:type owl:NamedIndividual ,
+                          :Basel_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Basel_Open_2016
+:Basel_Open_2016 rdf:type owl:NamedIndividual ,
+                          :Basel_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Basel_Open_2017
+:Basel_Open_2017 rdf:type owl:NamedIndividual ,
+                          :Basel_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Beijing_Open_2010
+:Beijing_Open_2010 rdf:type owl:NamedIndividual ,
+                            :Beijing_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Beijing_Open_2011
+:Beijing_Open_2011 rdf:type owl:NamedIndividual ,
+                            :Beijing_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Beijing_Open_2012
+:Beijing_Open_2012 rdf:type owl:NamedIndividual ,
+                            :Beijing_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Beijing_Open_2013
+:Beijing_Open_2013 rdf:type owl:NamedIndividual ,
+                            :Beijing_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Beijing_Open_2014
+:Beijing_Open_2014 rdf:type owl:NamedIndividual ,
+                            :Beijing_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Beijing_Open_2015
+:Beijing_Open_2015 rdf:type owl:NamedIndividual ,
+                            :Beijing_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Beijing_Open_2016
+:Beijing_Open_2016 rdf:type owl:NamedIndividual ,
+                            :Beijing_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Beijing_Open_2017
+:Beijing_Open_2017 rdf:type owl:NamedIndividual ,
+                            :Beijing_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Brisbane_Open_2010
+:Brisbane_Open_2010 rdf:type owl:NamedIndividual ,
+                             :Brisbane_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Brisbane_Open_2011
+:Brisbane_Open_2011 rdf:type owl:NamedIndividual ,
+                             :Brisbane_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Brisbane_Open_2012
+:Brisbane_Open_2012 rdf:type owl:NamedIndividual ,
+                             :Brisbane_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Brisbane_Open_2013
+:Brisbane_Open_2013 rdf:type owl:NamedIndividual ,
+                             :Brisbane_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Brisbane_Open_2014
+:Brisbane_Open_2014 rdf:type owl:NamedIndividual ,
+                             :Brisbane_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Brisbane_Open_2015
+:Brisbane_Open_2015 rdf:type owl:NamedIndividual ,
+                             :Brisbane_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Brisbane_Open_2016
+:Brisbane_Open_2016 rdf:type owl:NamedIndividual ,
+                             :Brisbane_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Brisbane_Open_2017
+:Brisbane_Open_2017 rdf:type owl:NamedIndividual ,
+                             :Brisbane_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Charleston_Open_2010
+:Charleston_Open_2010 rdf:type owl:NamedIndividual ,
+                               :Charleston_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Charleston_Open_2011
+:Charleston_Open_2011 rdf:type owl:NamedIndividual ,
+                               :Charleston_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Charleston_Open_2012
+:Charleston_Open_2012 rdf:type owl:NamedIndividual ,
+                               :Charleston_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Charleston_Open_2013
+:Charleston_Open_2013 rdf:type owl:NamedIndividual ,
+                               :Charleston_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Charleston_Open_2014
+:Charleston_Open_2014 rdf:type owl:NamedIndividual ,
+                               :Charleston_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Charleston_Open_2015
+:Charleston_Open_2015 rdf:type owl:NamedIndividual ,
+                               :Charleston_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Charleston_Open_2016
+:Charleston_Open_2016 rdf:type owl:NamedIndividual ,
+                               :Charleston_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Charleston_Open_2017
+:Charleston_Open_2017 rdf:type owl:NamedIndividual ,
+                               :Charleston_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Cincinnati_Open_2010
+:Cincinnati_Open_2010 rdf:type owl:NamedIndividual ,
+                               :Cincinnati_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Cincinnati_Open_2011
+:Cincinnati_Open_2011 rdf:type owl:NamedIndividual ,
+                               :Cincinnati_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Cincinnati_Open_2012
+:Cincinnati_Open_2012 rdf:type owl:NamedIndividual ,
+                               :Cincinnati_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Cincinnati_Open_2013
+:Cincinnati_Open_2013 rdf:type owl:NamedIndividual ,
+                               :Cincinnati_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Cincinnati_Open_2014
+:Cincinnati_Open_2014 rdf:type owl:NamedIndividual ,
+                               :Cincinnati_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Cincinnati_Open_2015
+:Cincinnati_Open_2015 rdf:type owl:NamedIndividual ,
+                               :Cincinnati_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Cincinnati_Open_2016
+:Cincinnati_Open_2016 rdf:type owl:NamedIndividual ,
+                               :Cincinnati_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Cincinnati_Open_2017
+:Cincinnati_Open_2017 rdf:type owl:NamedIndividual ,
+                               :Cincinnati_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Dubai_Duty_Free_Open_2010
+:Dubai_Duty_Free_Open_2010 rdf:type owl:NamedIndividual ,
+                                    :Dubai_Duty_Free_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Dubai_Duty_Free_Open_2011
+:Dubai_Duty_Free_Open_2011 rdf:type owl:NamedIndividual ,
+                                    :Dubai_Duty_Free_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Dubai_Duty_Free_Open_2012
+:Dubai_Duty_Free_Open_2012 rdf:type owl:NamedIndividual ,
+                                    :Dubai_Duty_Free_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Dubai_Duty_Free_Open_2013
+:Dubai_Duty_Free_Open_2013 rdf:type owl:NamedIndividual ,
+                                    :Dubai_Duty_Free_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Dubai_Duty_Free_Open_2014
+:Dubai_Duty_Free_Open_2014 rdf:type owl:NamedIndividual ,
+                                    :Dubai_Duty_Free_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Dubai_Duty_Free_Open_2015
+:Dubai_Duty_Free_Open_2015 rdf:type owl:NamedIndividual ,
+                                    :Dubai_Duty_Free_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Dubai_Duty_Free_Open_2016
+:Dubai_Duty_Free_Open_2016 rdf:type owl:NamedIndividual ,
+                                    :Dubai_Duty_Free_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Dubai_Duty_Free_Open_2017
+:Dubai_Duty_Free_Open_2017 rdf:type owl:NamedIndividual ,
+                                    :Dubai_Duty_Free_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Eastborne_Open_2010
+:Eastborne_Open_2010 rdf:type owl:NamedIndividual ,
+                              :Eastborne_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Eastborne_Open_2011
+:Eastborne_Open_2011 rdf:type owl:NamedIndividual ,
+                              :Eastborne_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Eastborne_Open_2012
+:Eastborne_Open_2012 rdf:type owl:NamedIndividual ,
+                              :Eastborne_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Eastborne_Open_2013
+:Eastborne_Open_2013 rdf:type owl:NamedIndividual ,
+                              :Eastborne_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Eastborne_Open_2014
+:Eastborne_Open_2014 rdf:type owl:NamedIndividual ,
+                              :Eastborne_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Eastborne_Open_2015
+:Eastborne_Open_2015 rdf:type owl:NamedIndividual ,
+                              :Eastborne_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Eastborne_Open_2016
+:Eastborne_Open_2016 rdf:type owl:NamedIndividual ,
+                              :Eastborne_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Eastborne_Open_2017
+:Eastborne_Open_2017 rdf:type owl:NamedIndividual ,
+                              :Eastborne_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Halle_Open_2010
+:Halle_Open_2010 rdf:type owl:NamedIndividual ,
+                          :Halle_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Halle_Open_2011
+:Halle_Open_2011 rdf:type owl:NamedIndividual ,
+                          :Halle_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Halle_Open_2012
+:Halle_Open_2012 rdf:type owl:NamedIndividual ,
+                          :Halle_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Halle_Open_2013
+:Halle_Open_2013 rdf:type owl:NamedIndividual ,
+                          :Halle_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Halle_Open_2014
+:Halle_Open_2014 rdf:type owl:NamedIndividual ,
+                          :Halle_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Halle_Open_2015
+:Halle_Open_2015 rdf:type owl:NamedIndividual ,
+                          :Halle_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Halle_Open_2016
+:Halle_Open_2016 rdf:type owl:NamedIndividual ,
+                          :Halle_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Halle_Open_2017
+:Halle_Open_2017 rdf:type owl:NamedIndividual ,
+                          :Halle_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Hamburg_Open_2010
+:Hamburg_Open_2010 rdf:type owl:NamedIndividual ,
+                            :Hamburg_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Hamburg_Open_2011
+:Hamburg_Open_2011 rdf:type owl:NamedIndividual ,
+                            :Hamburg_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Hamburg_Open_2012
+:Hamburg_Open_2012 rdf:type owl:NamedIndividual ,
+                            :Hamburg_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Hamburg_Open_2013
+:Hamburg_Open_2013 rdf:type owl:NamedIndividual ,
+                            :Hamburg_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Hamburg_Open_2014
+:Hamburg_Open_2014 rdf:type owl:NamedIndividual ,
+                            :Hamburg_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Hamburg_Open_2015
+:Hamburg_Open_2015 rdf:type owl:NamedIndividual ,
+                            :Hamburg_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Hamburg_Open_2016
+:Hamburg_Open_2016 rdf:type owl:NamedIndividual ,
+                            :Hamburg_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Hamburg_Open_2017
+:Hamburg_Open_2017 rdf:type owl:NamedIndividual ,
+                            :Hamburg_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Indian_Wells_Open_2010
+:Indian_Wells_Open_2010 rdf:type owl:NamedIndividual ,
+                                 :Indian_Wells_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Indian_Wells_Open_2011
+:Indian_Wells_Open_2011 rdf:type owl:NamedIndividual ,
+                                 :Indian_Wells_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Indian_Wells_Open_2012
+:Indian_Wells_Open_2012 rdf:type owl:NamedIndividual ,
+                                 :Indian_Wells_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Indian_Wells_Open_2013
+:Indian_Wells_Open_2013 rdf:type owl:NamedIndividual ,
+                                 :Indian_Wells_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Indian_Wells_Open_2014
+:Indian_Wells_Open_2014 rdf:type owl:NamedIndividual ,
+                                 :Indian_Wells_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Indian_Wells_Open_2015
+:Indian_Wells_Open_2015 rdf:type owl:NamedIndividual ,
+                                 :Indian_Wells_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Indian_Wells_Open_2016
+:Indian_Wells_Open_2016 rdf:type owl:NamedIndividual ,
+                                 :Indian_Wells_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Indian_Wells_Open_2017
+:Indian_Wells_Open_2017 rdf:type owl:NamedIndividual ,
+                                 :Indian_Wells_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#London_Open_2010
+:London_Open_2010 rdf:type owl:NamedIndividual ,
+                           :London_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#London_Open_2011
+:London_Open_2011 rdf:type owl:NamedIndividual ,
+                           :London_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#London_Open_2012
+:London_Open_2012 rdf:type owl:NamedIndividual ,
+                           :London_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#London_Open_2013
+:London_Open_2013 rdf:type owl:NamedIndividual ,
+                           :London_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#London_Open_2014
+:London_Open_2014 rdf:type owl:NamedIndividual ,
+                           :London_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#London_Open_2015
+:London_Open_2015 rdf:type owl:NamedIndividual ,
+                           :London_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#London_Open_2016
+:London_Open_2016 rdf:type owl:NamedIndividual ,
+                           :London_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#London_Open_2017
+:London_Open_2017 rdf:type owl:NamedIndividual ,
+                           :London_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Madrid_Open_2010
+:Madrid_Open_2010 rdf:type owl:NamedIndividual ,
+                           :Madrid_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Madrid_Open_2011
+:Madrid_Open_2011 rdf:type owl:NamedIndividual ,
+                           :Madrid_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Madrid_Open_2012
+:Madrid_Open_2012 rdf:type owl:NamedIndividual ,
+                           :Madrid_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Madrid_Open_2013
+:Madrid_Open_2013 rdf:type owl:NamedIndividual ,
+                           :Madrid_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Madrid_Open_2014
+:Madrid_Open_2014 rdf:type owl:NamedIndividual ,
+                           :Madrid_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Madrid_Open_2015
+:Madrid_Open_2015 rdf:type owl:NamedIndividual ,
+                           :Madrid_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Madrid_Open_2016
+:Madrid_Open_2016 rdf:type owl:NamedIndividual ,
+                           :Madrid_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Madrid_Open_2017
+:Madrid_Open_2017 rdf:type owl:NamedIndividual ,
+                           :Madrid_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Miami_Open_2010
+:Miami_Open_2010 rdf:type owl:NamedIndividual ,
+                          :Miami_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Miami_Open_2011
+:Miami_Open_2011 rdf:type owl:NamedIndividual ,
+                          :Miami_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Miami_Open_2012
+:Miami_Open_2012 rdf:type owl:NamedIndividual ,
+                          :Miami_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Miami_Open_2013
+:Miami_Open_2013 rdf:type owl:NamedIndividual ,
+                          :Miami_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Miami_Open_2014
+:Miami_Open_2014 rdf:type owl:NamedIndividual ,
+                          :Miami_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Miami_Open_2015
+:Miami_Open_2015 rdf:type owl:NamedIndividual ,
+                          :Miami_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Miami_Open_2016
+:Miami_Open_2016 rdf:type owl:NamedIndividual ,
+                          :Miami_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Miami_Open_2017
+:Miami_Open_2017 rdf:type owl:NamedIndividual ,
+                          :Miami_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monte_Carlo_Masters_2010
+:Monte_Carlo_Masters_2010 rdf:type owl:NamedIndividual ,
+                                   :Monte_Carlo_Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monte_Carlo_Masters_2011
+:Monte_Carlo_Masters_2011 rdf:type owl:NamedIndividual ,
+                                   :Monte_Carlo_Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monte_Carlo_Masters_2012
+:Monte_Carlo_Masters_2012 rdf:type owl:NamedIndividual ,
+                                   :Monte_Carlo_Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monte_Carlo_Masters_2013
+:Monte_Carlo_Masters_2013 rdf:type owl:NamedIndividual ,
+                                   :Monte_Carlo_Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monte_Carlo_Masters_2014
+:Monte_Carlo_Masters_2014 rdf:type owl:NamedIndividual ,
+                                   :Monte_Carlo_Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monte_Carlo_Masters_2015
+:Monte_Carlo_Masters_2015 rdf:type owl:NamedIndividual ,
+                                   :Monte_Carlo_Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monte_Carlo_Masters_2016
+:Monte_Carlo_Masters_2016 rdf:type owl:NamedIndividual ,
+                                   :Monte_Carlo_Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monte_Carlo_Masters_2017
+:Monte_Carlo_Masters_2017 rdf:type owl:NamedIndividual ,
+                                   :Monte_Carlo_Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monterrey_Open_2010
+:Monterrey_Open_2010 rdf:type owl:NamedIndividual ,
+                              :Monterrey_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monterrey_Open_2011
+:Monterrey_Open_2011 rdf:type owl:NamedIndividual ,
+                              :Monterrey_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monterrey_Open_2012
+:Monterrey_Open_2012 rdf:type owl:NamedIndividual ,
+                              :Monterrey_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monterrey_Open_2013
+:Monterrey_Open_2013 rdf:type owl:NamedIndividual ,
+                              :Monterrey_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monterrey_Open_2014
+:Monterrey_Open_2014 rdf:type owl:NamedIndividual ,
+                              :Monterrey_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monterrey_Open_2015
+:Monterrey_Open_2015 rdf:type owl:NamedIndividual ,
+                              :Monterrey_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monterrey_Open_2016
+:Monterrey_Open_2016 rdf:type owl:NamedIndividual ,
+                              :Monterrey_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monterrey_Open_2017
+:Monterrey_Open_2017 rdf:type owl:NamedIndividual ,
+                              :Monterrey_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Moskow_Open_2010
+:Moskow_Open_2010 rdf:type owl:NamedIndividual ,
+                           :Moskow_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Moskow_Open_2011
+:Moskow_Open_2011 rdf:type owl:NamedIndividual ,
+                           :Moskow_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Moskow_Open_2012
+:Moskow_Open_2012 rdf:type owl:NamedIndividual ,
+                           :Moskow_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Moskow_Open_2013
+:Moskow_Open_2013 rdf:type owl:NamedIndividual ,
+                           :Moskow_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Moskow_Open_2014
+:Moskow_Open_2014 rdf:type owl:NamedIndividual ,
+                           :Moskow_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Moskow_Open_2015
+:Moskow_Open_2015 rdf:type owl:NamedIndividual ,
+                           :Moskow_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Moskow_Open_2016
+:Moskow_Open_2016 rdf:type owl:NamedIndividual ,
+                           :Moskow_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Moskow_Open_2017
+:Moskow_Open_2017 rdf:type owl:NamedIndividual ,
+                           :Moskow_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Ningbo_Open_2010
+:Ningbo_Open_2010 rdf:type owl:NamedIndividual ,
+                           :Ningbo_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Ningbo_Open_2011
+:Ningbo_Open_2011 rdf:type owl:NamedIndividual ,
+                           :Ningbo_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Ningbo_Open_2012
+:Ningbo_Open_2012 rdf:type owl:NamedIndividual ,
+                           :Ningbo_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Ningbo_Open_2013
+:Ningbo_Open_2013 rdf:type owl:NamedIndividual ,
+                           :Ningbo_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Ningbo_Open_2014
+:Ningbo_Open_2014 rdf:type owl:NamedIndividual ,
+                           :Ningbo_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Ningbo_Open_2015
+:Ningbo_Open_2015 rdf:type owl:NamedIndividual ,
+                           :Ningbo_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Ningbo_Open_2016
+:Ningbo_Open_2016 rdf:type owl:NamedIndividual ,
+                           :Ningbo_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Ningbo_Open_2017
+:Ningbo_Open_2017 rdf:type owl:NamedIndividual ,
+                           :Ningbo_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Paris_Masters_2010
+:Paris_Masters_2010 rdf:type owl:NamedIndividual ,
+                             :Paris_Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Paris_Masters_2011
+:Paris_Masters_2011 rdf:type owl:NamedIndividual ,
+                             :Paris_Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Paris_Masters_2012
+:Paris_Masters_2012 rdf:type owl:NamedIndividual ,
+                             :Paris_Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Paris_Masters_2013
+:Paris_Masters_2013 rdf:type owl:NamedIndividual ,
+                             :Paris_Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Paris_Masters_2014
+:Paris_Masters_2014 rdf:type owl:NamedIndividual ,
+                             :Paris_Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Paris_Masters_2015
+:Paris_Masters_2015 rdf:type owl:NamedIndividual ,
+                             :Paris_Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Paris_Masters_2016
+:Paris_Masters_2016 rdf:type owl:NamedIndividual ,
+                             :Paris_Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Paris_Masters_2017
+:Paris_Masters_2017 rdf:type owl:NamedIndividual ,
+                             :Paris_Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Qatar_Open_2010
+:Qatar_Open_2010 rdf:type owl:NamedIndividual ,
+                          :Qatar_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Qatar_Open_2011
+:Qatar_Open_2011 rdf:type owl:NamedIndividual ,
+                          :Qatar_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Qatar_Open_2012
+:Qatar_Open_2012 rdf:type owl:NamedIndividual ,
+                          :Qatar_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Qatar_Open_2013
+:Qatar_Open_2013 rdf:type owl:NamedIndividual ,
+                          :Qatar_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Qatar_Open_2014
+:Qatar_Open_2014 rdf:type owl:NamedIndividual ,
+                          :Qatar_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Qatar_Open_2015
+:Qatar_Open_2015 rdf:type owl:NamedIndividual ,
+                          :Qatar_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Qatar_Open_2016
+:Qatar_Open_2016 rdf:type owl:NamedIndividual ,
+                          :Qatar_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Qatar_Open_2017
+:Qatar_Open_2017 rdf:type owl:NamedIndividual ,
+                          :Qatar_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rio_De_Janeiro_2010
+:Rio_De_Janeiro_2010 rdf:type owl:NamedIndividual ,
+                              :Rio_De_Janeiro .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rio_De_Janeiro_2011
+:Rio_De_Janeiro_2011 rdf:type owl:NamedIndividual ,
+                              :Rio_De_Janeiro .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rio_De_Janeiro_2012
+:Rio_De_Janeiro_2012 rdf:type owl:NamedIndividual ,
+                              :Rio_De_Janeiro .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rio_De_Janeiro_2013
+:Rio_De_Janeiro_2013 rdf:type owl:NamedIndividual ,
+                              :Rio_De_Janeiro .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rio_De_Janeiro_2014
+:Rio_De_Janeiro_2014 rdf:type owl:NamedIndividual ,
+                              :Rio_De_Janeiro .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rio_De_Janeiro_2015
+:Rio_De_Janeiro_2015 rdf:type owl:NamedIndividual ,
+                              :Rio_De_Janeiro .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rio_De_Janeiro_2016
+:Rio_De_Janeiro_2016 rdf:type owl:NamedIndividual ,
+                              :Rio_De_Janeiro .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rio_De_Janeiro_2017
+:Rio_De_Janeiro_2017 rdf:type owl:NamedIndividual ,
+                              :Rio_De_Janeiro .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Roland_Garros_2010
+:Roland_Garros_2010 rdf:type owl:NamedIndividual ,
+                             :Roland_Garros .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Roland_Garros_2011
+:Roland_Garros_2011 rdf:type owl:NamedIndividual ,
+                             :Roland_Garros .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Roland_Garros_2012
+:Roland_Garros_2012 rdf:type owl:NamedIndividual ,
+                             :Roland_Garros .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Roland_Garros_2013
+:Roland_Garros_2013 rdf:type owl:NamedIndividual ,
+                             :Roland_Garros .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Roland_Garros_2014
+:Roland_Garros_2014 rdf:type owl:NamedIndividual ,
+                             :Roland_Garros .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Roland_Garros_2015
+:Roland_Garros_2015 rdf:type owl:NamedIndividual ,
+                             :Roland_Garros .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Roland_Garros_2016
+:Roland_Garros_2016 rdf:type owl:NamedIndividual ,
+                             :Roland_Garros .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Roland_Garros_2017
+:Roland_Garros_2017 rdf:type owl:NamedIndividual ,
+                             :Roland_Garros .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rome_Open_2010
+:Rome_Open_2010 rdf:type owl:NamedIndividual ,
+                         :Rome_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rome_Open_2011
+:Rome_Open_2011 rdf:type owl:NamedIndividual ,
+                         :Rome_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rome_Open_2012
+:Rome_Open_2012 rdf:type owl:NamedIndividual ,
+                         :Rome_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rome_Open_2013
+:Rome_Open_2013 rdf:type owl:NamedIndividual ,
+                         :Rome_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rome_Open_2014
+:Rome_Open_2014 rdf:type owl:NamedIndividual ,
+                         :Rome_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rome_Open_2015
+:Rome_Open_2015 rdf:type owl:NamedIndividual ,
+                         :Rome_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rome_Open_2016
+:Rome_Open_2016 rdf:type owl:NamedIndividual ,
+                         :Rome_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rome_Open_2017
+:Rome_Open_2017 rdf:type owl:NamedIndividual ,
+                         :Rome_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rotterdam_Open_2010
+:Rotterdam_Open_2010 rdf:type owl:NamedIndividual ,
+                              :Rotterdam_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rotterdam_Open_2011
+:Rotterdam_Open_2011 rdf:type owl:NamedIndividual ,
+                              :Rotterdam_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rotterdam_Open_2012
+:Rotterdam_Open_2012 rdf:type owl:NamedIndividual ,
+                              :Rotterdam_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rotterdam_Open_2013
+:Rotterdam_Open_2013 rdf:type owl:NamedIndividual ,
+                              :Rotterdam_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rotterdam_Open_2014
+:Rotterdam_Open_2014 rdf:type owl:NamedIndividual ,
+                              :Rotterdam_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rotterdam_Open_2015
+:Rotterdam_Open_2015 rdf:type owl:NamedIndividual ,
+                              :Rotterdam_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rotterdam_Open_2016
+:Rotterdam_Open_2016 rdf:type owl:NamedIndividual ,
+                              :Rotterdam_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rotterdam_Open_2017
+:Rotterdam_Open_2017 rdf:type owl:NamedIndividual ,
+                              :Rotterdam_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Seoul_Open_2010
+:Seoul_Open_2010 rdf:type owl:NamedIndividual ,
+                          :Seoul_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Seoul_Open_2011
+:Seoul_Open_2011 rdf:type owl:NamedIndividual ,
+                          :Seoul_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Seoul_Open_2012
+:Seoul_Open_2012 rdf:type owl:NamedIndividual ,
+                          :Seoul_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Seoul_Open_2013
+:Seoul_Open_2013 rdf:type owl:NamedIndividual ,
+                          :Seoul_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Seoul_Open_2014
+:Seoul_Open_2014 rdf:type owl:NamedIndividual ,
+                          :Seoul_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Seoul_Open_2015
+:Seoul_Open_2015 rdf:type owl:NamedIndividual ,
+                          :Seoul_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Seoul_Open_2016
+:Seoul_Open_2016 rdf:type owl:NamedIndividual ,
+                          :Seoul_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Seoul_Open_2017
+:Seoul_Open_2017 rdf:type owl:NamedIndividual ,
+                          :Seoul_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Shanghai_Masters_2010
+:Shanghai_Masters_2010 rdf:type owl:NamedIndividual ,
+                                :Shanghai_Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Shanghai_Masters_2011
+:Shanghai_Masters_2011 rdf:type owl:NamedIndividual ,
+                                :Shanghai_Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Shanghai_Masters_2012
+:Shanghai_Masters_2012 rdf:type owl:NamedIndividual ,
+                                :Shanghai_Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Shanghai_Masters_2013
+:Shanghai_Masters_2013 rdf:type owl:NamedIndividual ,
+                                :Shanghai_Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Shanghai_Masters_2014
+:Shanghai_Masters_2014 rdf:type owl:NamedIndividual ,
+                                :Shanghai_Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Shanghai_Masters_2015
+:Shanghai_Masters_2015 rdf:type owl:NamedIndividual ,
+                                :Shanghai_Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Shanghai_Masters_2016
+:Shanghai_Masters_2016 rdf:type owl:NamedIndividual ,
+                                :Shanghai_Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Shanghai_Masters_2017
+:Shanghai_Masters_2017 rdf:type owl:NamedIndividual ,
+                                :Shanghai_Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Strasbourg_Open_2010
+:Strasbourg_Open_2010 rdf:type owl:NamedIndividual ,
+                               :Strasbourg_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Strasbourg_Open_2011
+:Strasbourg_Open_2011 rdf:type owl:NamedIndividual ,
+                               :Strasbourg_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Strasbourg_Open_2012
+:Strasbourg_Open_2012 rdf:type owl:NamedIndividual ,
+                               :Strasbourg_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Strasbourg_Open_2013
+:Strasbourg_Open_2013 rdf:type owl:NamedIndividual ,
+                               :Strasbourg_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Strasbourg_Open_2014
+:Strasbourg_Open_2014 rdf:type owl:NamedIndividual ,
+                               :Strasbourg_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Strasbourg_Open_2015
+:Strasbourg_Open_2015 rdf:type owl:NamedIndividual ,
+                               :Strasbourg_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Strasbourg_Open_2016
+:Strasbourg_Open_2016 rdf:type owl:NamedIndividual ,
+                               :Strasbourg_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Strasbourg_Open_2017
+:Strasbourg_Open_2017 rdf:type owl:NamedIndividual ,
+                               :Strasbourg_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Stuttgart_Open_2010
+:Stuttgart_Open_2010 rdf:type owl:NamedIndividual ,
+                              :Stuttgart_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Stuttgart_Open_2011
+:Stuttgart_Open_2011 rdf:type owl:NamedIndividual ,
+                              :Stuttgart_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Stuttgart_Open_2012
+:Stuttgart_Open_2012 rdf:type owl:NamedIndividual ,
+                              :Stuttgart_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Stuttgart_Open_2013
+:Stuttgart_Open_2013 rdf:type owl:NamedIndividual ,
+                              :Stuttgart_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Stuttgart_Open_2014
+:Stuttgart_Open_2014 rdf:type owl:NamedIndividual ,
+                              :Stuttgart_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Stuttgart_Open_2015
+:Stuttgart_Open_2015 rdf:type owl:NamedIndividual ,
+                              :Stuttgart_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Stuttgart_Open_2016
+:Stuttgart_Open_2016 rdf:type owl:NamedIndividual ,
+                              :Stuttgart_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Stuttgart_Open_2017
+:Stuttgart_Open_2017 rdf:type owl:NamedIndividual ,
+                              :Stuttgart_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sydney_Open_2010
+:Sydney_Open_2010 rdf:type owl:NamedIndividual ,
+                           :Sydney_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sydney_Open_2011
+:Sydney_Open_2011 rdf:type owl:NamedIndividual ,
+                           :Sydney_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sydney_Open_2012
+:Sydney_Open_2012 rdf:type owl:NamedIndividual ,
+                           :Sydney_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sydney_Open_2013
+:Sydney_Open_2013 rdf:type owl:NamedIndividual ,
+                           :Sydney_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sydney_Open_2014
+:Sydney_Open_2014 rdf:type owl:NamedIndividual ,
+                           :Sydney_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sydney_Open_2015
+:Sydney_Open_2015 rdf:type owl:NamedIndividual ,
+                           :Sydney_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sydney_Open_2016
+:Sydney_Open_2016 rdf:type owl:NamedIndividual ,
+                           :Sydney_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sydney_Open_2017
+:Sydney_Open_2017 rdf:type owl:NamedIndividual ,
+                           :Sydney_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tokyo_Open_2010
+:Tokyo_Open_2010 rdf:type owl:NamedIndividual ,
+                          :Tokyo_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tokyo_Open_2011
+:Tokyo_Open_2011 rdf:type owl:NamedIndividual ,
+                          :Tokyo_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tokyo_Open_2012
+:Tokyo_Open_2012 rdf:type owl:NamedIndividual ,
+                          :Tokyo_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tokyo_Open_2013
+:Tokyo_Open_2013 rdf:type owl:NamedIndividual ,
+                          :Tokyo_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tokyo_Open_2014
+:Tokyo_Open_2014 rdf:type owl:NamedIndividual ,
+                          :Tokyo_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tokyo_Open_2015
+:Tokyo_Open_2015 rdf:type owl:NamedIndividual ,
+                          :Tokyo_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tokyo_Open_2016
+:Tokyo_Open_2016 rdf:type owl:NamedIndividual ,
+                          :Tokyo_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tokyo_Open_2017
+:Tokyo_Open_2017 rdf:type owl:NamedIndividual ,
+                          :Tokyo_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Toronto_Montreal_Open_2010
+:Toronto_Montreal_Open_2010 rdf:type owl:NamedIndividual ,
+                                     :Toronto_Montreal_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Toronto_Montreal_Open_2011
+:Toronto_Montreal_Open_2011 rdf:type owl:NamedIndividual ,
+                                     :Toronto_Montreal_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Toronto_Montreal_Open_2012
+:Toronto_Montreal_Open_2012 rdf:type owl:NamedIndividual ,
+                                     :Toronto_Montreal_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Toronto_Montreal_Open_2013
+:Toronto_Montreal_Open_2013 rdf:type owl:NamedIndividual ,
+                                     :Toronto_Montreal_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Toronto_Montreal_Open_2014
+:Toronto_Montreal_Open_2014 rdf:type owl:NamedIndividual ,
+                                     :Toronto_Montreal_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Toronto_Montreal_Open_2015
+:Toronto_Montreal_Open_2015 rdf:type owl:NamedIndividual ,
+                                     :Toronto_Montreal_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Toronto_Montreal_Open_2016
+:Toronto_Montreal_Open_2016 rdf:type owl:NamedIndividual ,
+                                     :Toronto_Montreal_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Toronto_Montreal_Open_2017
+:Toronto_Montreal_Open_2017 rdf:type owl:NamedIndividual ,
+                                     :Toronto_Montreal_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#US_Open_2010
+:US_Open_2010 rdf:type owl:NamedIndividual ,
+                       :US_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#US_Open_2011
+:US_Open_2011 rdf:type owl:NamedIndividual ,
+                       :US_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#US_Open_2012
+:US_Open_2012 rdf:type owl:NamedIndividual ,
+                       :US_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#US_Open_2013
+:US_Open_2013 rdf:type owl:NamedIndividual ,
+                       :US_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#US_Open_2014
+:US_Open_2014 rdf:type owl:NamedIndividual ,
+                       :US_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#US_Open_2015
+:US_Open_2015 rdf:type owl:NamedIndividual ,
+                       :US_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#US_Open_2016
+:US_Open_2016 rdf:type owl:NamedIndividual ,
+                       :US_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#US_Open_2017
+:US_Open_2017 rdf:type owl:NamedIndividual ,
+                       :US_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Vienna_Open_2010
+:Vienna_Open_2010 rdf:type owl:NamedIndividual ,
+                           :Vienna_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Vienna_Open_2011
+:Vienna_Open_2011 rdf:type owl:NamedIndividual ,
+                           :Vienna_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Vienna_Open_2012
+:Vienna_Open_2012 rdf:type owl:NamedIndividual ,
+                           :Vienna_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Vienna_Open_2013
+:Vienna_Open_2013 rdf:type owl:NamedIndividual ,
+                           :Vienna_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Vienna_Open_2014
+:Vienna_Open_2014 rdf:type owl:NamedIndividual ,
+                           :Vienna_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Vienna_Open_2015
+:Vienna_Open_2015 rdf:type owl:NamedIndividual ,
+                           :Vienna_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Vienna_Open_2016
+:Vienna_Open_2016 rdf:type owl:NamedIndividual ,
+                           :Vienna_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Vienna_Open_2017
+:Vienna_Open_2017 rdf:type owl:NamedIndividual ,
+                           :Vienna_Open .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Wimbledon_2010
+:Wimbledon_2010 rdf:type owl:NamedIndividual ,
+                         :Wimbledon .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Wimbledon_2011
+:Wimbledon_2011 rdf:type owl:NamedIndividual ,
+                         :Wimbledon .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Wimbledon_2012
+:Wimbledon_2012 rdf:type owl:NamedIndividual ,
+                         :Wimbledon .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Wimbledon_2013
+:Wimbledon_2013 rdf:type owl:NamedIndividual ,
+                         :Wimbledon .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Wimbledon_2014
+:Wimbledon_2014 rdf:type owl:NamedIndividual ,
+                         :Wimbledon .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Wimbledon_2015
+:Wimbledon_2015 rdf:type owl:NamedIndividual ,
+                         :Wimbledon .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Wimbledon_2016
+:Wimbledon_2016 rdf:type owl:NamedIndividual ,
+                         :Wimbledon .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Wimbledon_2017
+:Wimbledon_2017 rdf:type owl:NamedIndividual ,
+                         :Wimbledon .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,2935 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#"
+     xml:base="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasParticipant -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasParticipant">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#participatesIn"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tournaments"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Players"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#isSponsoredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#isSponsoredBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#sponsors"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tournaments"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sponsorship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#participatesIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#participatesIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Players"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tournaments"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#sponsors -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#sponsors">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sponsorship"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tournaments"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasFemaleFinalViewership -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasFemaleFinalViewership">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Grand_Slams"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Masters"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#WTA_500"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasFemaleFinalsAttendance -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasFemaleFinalsAttendance">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasFinalsAttendance"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tournaments"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasFemalePrizePool -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasFemalePrizePool">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasTotalPrizePool"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Grand_Slams"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Masters"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#WTA_500"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasFinalsAttendance -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasFinalsAttendance">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasTotalAttendance"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tournaments"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasMaleFinalViewership -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasMaleFinalViewership">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#ATP_500"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Grand_Slams"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Masters"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasMaleFinalsAttendance -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasMaleFinalsAttendance">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasFinalsAttendance"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tournaments"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasMalePrizePool -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasMalePrizePool">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasTotalPrizePool"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#ATP_500"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Grand_Slams"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Masters"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasSponsorshipAmount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasSponsorshipAmount">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Minor_Sponsors"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Official_Sponsor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sponsorship"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Title_Sponsor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasTotalAttendance -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasTotalAttendance">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tournaments"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasTotalPrizePool -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasTotalPrizePool">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tournaments"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#isFemaleTournament -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#isFemaleTournament">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Grand_Slams"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Masters"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#WTA_500"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#isMaleTournament"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#isMaleTournament -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#isMaleTournament">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#ATP_500"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Grand_Slams"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Masters"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#isMixedTournament -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#isMixedTournament">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Grand_Slams"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Masters"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#ATP_500 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#ATP_500">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tournaments"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Acapulco -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Acapulco">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#ATP_500"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Australian_Open -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Australian_Open">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Grand_Slams"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Barcelona_Open -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Barcelona_Open">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#ATP_500"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Basel_Open -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Basel_Open">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#ATP_500"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Beijing_Open -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Beijing_Open">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#ATP_500"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Brisbane_Open -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Brisbane_Open">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#WTA_500"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Charleston_Open -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Charleston_Open">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#WTA_500"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Cincinnati_Open -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Cincinnati_Open">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Masters"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Dubai_Duty_Free_Open -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Dubai_Duty_Free_Open">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#ATP_500"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Eastborne_Open -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Eastborne_Open">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#WTA_500"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Female_Player -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Female_Player">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Players"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Male_Player"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Grand_Slams -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Grand_Slams">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tournaments"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Halle_Open -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Halle_Open">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#ATP_500"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Hamburg_Open -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Hamburg_Open">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#ATP_500"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Indian_Wells_Open -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Indian_Wells_Open">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Masters"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#London_Open -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#London_Open">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#ATP_500"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Madrid_Open -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Madrid_Open">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Masters"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Male_Player -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Male_Player">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Players"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Masters -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Masters">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tournaments"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Miami_Open -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Miami_Open">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Masters"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Minor_Sponsors -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Minor_Sponsors">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sponsorship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monte_Carlo_Masters -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monte_Carlo_Masters">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Masters"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monterrey_Open -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monterrey_Open">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#WTA_500"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Moskow_Open -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Moskow_Open">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#WTA_500"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Ningbo_Open -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Ningbo_Open">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#WTA_500"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Official_Sponsor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Official_Sponsor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sponsorship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Paris_Masters -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Paris_Masters">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Masters"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Players -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Players"/>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Qatar_Open -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Qatar_Open">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Masters"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rio_De_Janeiro -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rio_De_Janeiro">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#ATP_500"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Roland_Garros -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Roland_Garros">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Grand_Slams"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rome_Open -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rome_Open">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Masters"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rotterdam_Open -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rotterdam_Open">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#ATP_500"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Seoul_Open -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Seoul_Open">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#WTA_500"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Shanghai_Masters -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Shanghai_Masters">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Masters"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sponsorship -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sponsorship"/>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Strasbourg_Open -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Strasbourg_Open">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#WTA_500"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Stuttgart_Open -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Stuttgart_Open">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#WTA_500"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sydney_Open -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sydney_Open">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#WTA_500"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Title_Sponsor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Title_Sponsor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sponsorship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tokyo_Open -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tokyo_Open">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#WTA_500"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Toronto_Montreal_Open -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Toronto_Montreal_Open">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Masters"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tournaments -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tournaments"/>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#US_Open -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#US_Open">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Grand_Slams"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Vienna_Open -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Vienna_Open">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#ATP_500"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#WTA_500 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#WTA_500">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tournaments"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Wimbledon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Wimbledon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Grand_Slams"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Acapulco_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Acapulco_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Acapulco"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Acapulco_2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Acapulco_2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Acapulco"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Acapulco_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Acapulco_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Acapulco"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Acapulco_2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Acapulco_2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Acapulco"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Acapulco_2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Acapulco_2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Acapulco"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Acapulco_2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Acapulco_2015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Acapulco"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Acapulco_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Acapulco_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Acapulco"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Acapulco_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Acapulco_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Acapulco"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Australian_Open_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Australian_Open_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Australian_Open"/>
+        <hasTotalAttendance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">653860</hasTotalAttendance>
+        <isMixedTournament rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isMixedTournament>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Australian_Open_2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Australian_Open_2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Australian_Open"/>
+        <hasTotalAttendance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">651127</hasTotalAttendance>
+        <isMixedTournament rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isMixedTournament>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Australian_Open_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Australian_Open_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Australian_Open"/>
+        <hasTotalAttendance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">686006</hasTotalAttendance>
+        <isMixedTournament rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isMixedTournament>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Australian_Open_2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Australian_Open_2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Australian_Open"/>
+        <hasTotalAttendance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">684457</hasTotalAttendance>
+        <isMixedTournament rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isMixedTournament>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Australian_Open_2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Australian_Open_2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Australian_Open"/>
+        <hasTotalAttendance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">643280</hasTotalAttendance>
+        <isMixedTournament rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isMixedTournament>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Australian_Open_2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Australian_Open_2015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Australian_Open"/>
+        <hasTotalAttendance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">703899</hasTotalAttendance>
+        <isMixedTournament rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isMixedTournament>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Australian_Open_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Australian_Open_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Australian_Open"/>
+        <hasTotalAttendance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">720363</hasTotalAttendance>
+        <isMixedTournament rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isMixedTournament>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Australian_Open_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Australian_Open_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Australian_Open"/>
+        <hasTotalAttendance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">728763</hasTotalAttendance>
+        <isMixedTournament rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isMixedTournament>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Barcelona_Open_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Barcelona_Open_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Barcelona_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Barcelona_Open_2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Barcelona_Open_2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Barcelona_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Barcelona_Open_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Barcelona_Open_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Barcelona_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Barcelona_Open_2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Barcelona_Open_2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Barcelona_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Barcelona_Open_2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Barcelona_Open_2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Barcelona_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Barcelona_Open_2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Barcelona_Open_2015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Barcelona_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Barcelona_Open_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Barcelona_Open_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Barcelona_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Barcelona_Open_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Barcelona_Open_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Barcelona_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Basel_Open_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Basel_Open_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Basel_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Basel_Open_2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Basel_Open_2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Basel_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Basel_Open_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Basel_Open_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Basel_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Basel_Open_2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Basel_Open_2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Basel_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Basel_Open_2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Basel_Open_2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Basel_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Basel_Open_2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Basel_Open_2015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Basel_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Basel_Open_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Basel_Open_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Basel_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Basel_Open_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Basel_Open_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Basel_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Beijing_Open_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Beijing_Open_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Beijing_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Beijing_Open_2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Beijing_Open_2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Beijing_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Beijing_Open_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Beijing_Open_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Beijing_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Beijing_Open_2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Beijing_Open_2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Beijing_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Beijing_Open_2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Beijing_Open_2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Beijing_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Beijing_Open_2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Beijing_Open_2015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Beijing_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Beijing_Open_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Beijing_Open_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Beijing_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Beijing_Open_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Beijing_Open_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Beijing_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Brisbane_Open_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Brisbane_Open_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Brisbane_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Brisbane_Open_2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Brisbane_Open_2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Brisbane_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Brisbane_Open_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Brisbane_Open_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Brisbane_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Brisbane_Open_2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Brisbane_Open_2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Brisbane_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Brisbane_Open_2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Brisbane_Open_2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Brisbane_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Brisbane_Open_2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Brisbane_Open_2015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Brisbane_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Brisbane_Open_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Brisbane_Open_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Brisbane_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Brisbane_Open_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Brisbane_Open_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Brisbane_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Charleston_Open_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Charleston_Open_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Charleston_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Charleston_Open_2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Charleston_Open_2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Charleston_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Charleston_Open_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Charleston_Open_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Charleston_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Charleston_Open_2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Charleston_Open_2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Charleston_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Charleston_Open_2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Charleston_Open_2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Charleston_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Charleston_Open_2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Charleston_Open_2015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Charleston_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Charleston_Open_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Charleston_Open_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Charleston_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Charleston_Open_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Charleston_Open_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Charleston_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Cincinnati_Open_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Cincinnati_Open_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Cincinnati_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Cincinnati_Open_2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Cincinnati_Open_2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Cincinnati_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Cincinnati_Open_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Cincinnati_Open_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Cincinnati_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Cincinnati_Open_2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Cincinnati_Open_2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Cincinnati_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Cincinnati_Open_2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Cincinnati_Open_2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Cincinnati_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Cincinnati_Open_2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Cincinnati_Open_2015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Cincinnati_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Cincinnati_Open_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Cincinnati_Open_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Cincinnati_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Cincinnati_Open_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Cincinnati_Open_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Cincinnati_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Dubai_Duty_Free_Open_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Dubai_Duty_Free_Open_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Dubai_Duty_Free_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Dubai_Duty_Free_Open_2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Dubai_Duty_Free_Open_2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Dubai_Duty_Free_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Dubai_Duty_Free_Open_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Dubai_Duty_Free_Open_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Dubai_Duty_Free_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Dubai_Duty_Free_Open_2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Dubai_Duty_Free_Open_2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Dubai_Duty_Free_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Dubai_Duty_Free_Open_2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Dubai_Duty_Free_Open_2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Dubai_Duty_Free_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Dubai_Duty_Free_Open_2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Dubai_Duty_Free_Open_2015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Dubai_Duty_Free_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Dubai_Duty_Free_Open_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Dubai_Duty_Free_Open_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Dubai_Duty_Free_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Dubai_Duty_Free_Open_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Dubai_Duty_Free_Open_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Dubai_Duty_Free_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Eastborne_Open_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Eastborne_Open_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Eastborne_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Eastborne_Open_2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Eastborne_Open_2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Eastborne_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Eastborne_Open_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Eastborne_Open_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Eastborne_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Eastborne_Open_2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Eastborne_Open_2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Eastborne_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Eastborne_Open_2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Eastborne_Open_2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Eastborne_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Eastborne_Open_2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Eastborne_Open_2015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Eastborne_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Eastborne_Open_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Eastborne_Open_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Eastborne_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Eastborne_Open_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Eastborne_Open_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Eastborne_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Halle_Open_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Halle_Open_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Halle_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Halle_Open_2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Halle_Open_2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Halle_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Halle_Open_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Halle_Open_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Halle_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Halle_Open_2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Halle_Open_2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Halle_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Halle_Open_2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Halle_Open_2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Halle_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Halle_Open_2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Halle_Open_2015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Halle_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Halle_Open_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Halle_Open_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Halle_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Halle_Open_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Halle_Open_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Halle_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Hamburg_Open_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Hamburg_Open_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Hamburg_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Hamburg_Open_2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Hamburg_Open_2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Hamburg_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Hamburg_Open_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Hamburg_Open_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Hamburg_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Hamburg_Open_2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Hamburg_Open_2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Hamburg_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Hamburg_Open_2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Hamburg_Open_2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Hamburg_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Hamburg_Open_2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Hamburg_Open_2015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Hamburg_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Hamburg_Open_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Hamburg_Open_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Hamburg_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Hamburg_Open_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Hamburg_Open_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Hamburg_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Indian_Wells_Open_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Indian_Wells_Open_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Indian_Wells_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Indian_Wells_Open_2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Indian_Wells_Open_2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Indian_Wells_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Indian_Wells_Open_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Indian_Wells_Open_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Indian_Wells_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Indian_Wells_Open_2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Indian_Wells_Open_2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Indian_Wells_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Indian_Wells_Open_2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Indian_Wells_Open_2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Indian_Wells_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Indian_Wells_Open_2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Indian_Wells_Open_2015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Indian_Wells_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Indian_Wells_Open_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Indian_Wells_Open_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Indian_Wells_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Indian_Wells_Open_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Indian_Wells_Open_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Indian_Wells_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#London_Open_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#London_Open_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#London_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#London_Open_2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#London_Open_2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#London_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#London_Open_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#London_Open_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#London_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#London_Open_2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#London_Open_2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#London_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#London_Open_2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#London_Open_2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#London_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#London_Open_2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#London_Open_2015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#London_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#London_Open_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#London_Open_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#London_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#London_Open_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#London_Open_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#London_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Madrid_Open_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Madrid_Open_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Madrid_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Madrid_Open_2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Madrid_Open_2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Madrid_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Madrid_Open_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Madrid_Open_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Madrid_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Madrid_Open_2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Madrid_Open_2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Madrid_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Madrid_Open_2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Madrid_Open_2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Madrid_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Madrid_Open_2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Madrid_Open_2015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Madrid_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Madrid_Open_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Madrid_Open_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Madrid_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Madrid_Open_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Madrid_Open_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Madrid_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Miami_Open_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Miami_Open_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Miami_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Miami_Open_2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Miami_Open_2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Miami_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Miami_Open_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Miami_Open_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Miami_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Miami_Open_2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Miami_Open_2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Miami_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Miami_Open_2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Miami_Open_2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Miami_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Miami_Open_2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Miami_Open_2015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Miami_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Miami_Open_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Miami_Open_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Miami_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Miami_Open_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Miami_Open_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Miami_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monte_Carlo_Masters_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monte_Carlo_Masters_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monte_Carlo_Masters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monte_Carlo_Masters_2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monte_Carlo_Masters_2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monte_Carlo_Masters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monte_Carlo_Masters_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monte_Carlo_Masters_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monte_Carlo_Masters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monte_Carlo_Masters_2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monte_Carlo_Masters_2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monte_Carlo_Masters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monte_Carlo_Masters_2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monte_Carlo_Masters_2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monte_Carlo_Masters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monte_Carlo_Masters_2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monte_Carlo_Masters_2015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monte_Carlo_Masters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monte_Carlo_Masters_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monte_Carlo_Masters_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monte_Carlo_Masters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monte_Carlo_Masters_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monte_Carlo_Masters_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monte_Carlo_Masters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monterrey_Open_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monterrey_Open_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monterrey_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monterrey_Open_2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monterrey_Open_2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monterrey_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monterrey_Open_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monterrey_Open_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monterrey_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monterrey_Open_2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monterrey_Open_2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monterrey_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monterrey_Open_2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monterrey_Open_2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monterrey_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monterrey_Open_2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monterrey_Open_2015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monterrey_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monterrey_Open_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monterrey_Open_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monterrey_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monterrey_Open_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monterrey_Open_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monterrey_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Moskow_Open_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Moskow_Open_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Moskow_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Moskow_Open_2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Moskow_Open_2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Moskow_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Moskow_Open_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Moskow_Open_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Moskow_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Moskow_Open_2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Moskow_Open_2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Moskow_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Moskow_Open_2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Moskow_Open_2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Moskow_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Moskow_Open_2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Moskow_Open_2015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Moskow_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Moskow_Open_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Moskow_Open_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Moskow_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Moskow_Open_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Moskow_Open_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Moskow_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Ningbo_Open_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Ningbo_Open_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Ningbo_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Ningbo_Open_2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Ningbo_Open_2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Ningbo_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Ningbo_Open_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Ningbo_Open_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Ningbo_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Ningbo_Open_2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Ningbo_Open_2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Ningbo_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Ningbo_Open_2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Ningbo_Open_2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Ningbo_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Ningbo_Open_2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Ningbo_Open_2015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Ningbo_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Ningbo_Open_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Ningbo_Open_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Ningbo_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Ningbo_Open_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Ningbo_Open_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Ningbo_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Paris_Masters_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Paris_Masters_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Paris_Masters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Paris_Masters_2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Paris_Masters_2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Paris_Masters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Paris_Masters_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Paris_Masters_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Paris_Masters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Paris_Masters_2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Paris_Masters_2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Paris_Masters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Paris_Masters_2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Paris_Masters_2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Paris_Masters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Paris_Masters_2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Paris_Masters_2015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Paris_Masters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Paris_Masters_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Paris_Masters_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Paris_Masters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Paris_Masters_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Paris_Masters_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Paris_Masters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Qatar_Open_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Qatar_Open_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Qatar_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Qatar_Open_2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Qatar_Open_2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Qatar_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Qatar_Open_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Qatar_Open_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Qatar_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Qatar_Open_2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Qatar_Open_2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Qatar_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Qatar_Open_2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Qatar_Open_2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Qatar_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Qatar_Open_2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Qatar_Open_2015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Qatar_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Qatar_Open_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Qatar_Open_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Qatar_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Qatar_Open_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Qatar_Open_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Qatar_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rio_De_Janeiro_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rio_De_Janeiro_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rio_De_Janeiro"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rio_De_Janeiro_2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rio_De_Janeiro_2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rio_De_Janeiro"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rio_De_Janeiro_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rio_De_Janeiro_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rio_De_Janeiro"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rio_De_Janeiro_2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rio_De_Janeiro_2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rio_De_Janeiro"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rio_De_Janeiro_2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rio_De_Janeiro_2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rio_De_Janeiro"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rio_De_Janeiro_2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rio_De_Janeiro_2015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rio_De_Janeiro"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rio_De_Janeiro_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rio_De_Janeiro_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rio_De_Janeiro"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rio_De_Janeiro_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rio_De_Janeiro_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rio_De_Janeiro"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Roland_Garros_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Roland_Garros_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Roland_Garros"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Roland_Garros_2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Roland_Garros_2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Roland_Garros"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Roland_Garros_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Roland_Garros_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Roland_Garros"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Roland_Garros_2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Roland_Garros_2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Roland_Garros"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Roland_Garros_2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Roland_Garros_2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Roland_Garros"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Roland_Garros_2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Roland_Garros_2015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Roland_Garros"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Roland_Garros_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Roland_Garros_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Roland_Garros"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Roland_Garros_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Roland_Garros_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Roland_Garros"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rome_Open_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rome_Open_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rome_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rome_Open_2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rome_Open_2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rome_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rome_Open_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rome_Open_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rome_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rome_Open_2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rome_Open_2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rome_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rome_Open_2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rome_Open_2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rome_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rome_Open_2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rome_Open_2015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rome_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rome_Open_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rome_Open_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rome_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rome_Open_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rome_Open_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rome_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rotterdam_Open_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rotterdam_Open_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rotterdam_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rotterdam_Open_2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rotterdam_Open_2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rotterdam_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rotterdam_Open_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rotterdam_Open_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rotterdam_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rotterdam_Open_2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rotterdam_Open_2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rotterdam_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rotterdam_Open_2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rotterdam_Open_2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rotterdam_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rotterdam_Open_2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rotterdam_Open_2015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rotterdam_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rotterdam_Open_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rotterdam_Open_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rotterdam_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rotterdam_Open_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rotterdam_Open_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rotterdam_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Seoul_Open_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Seoul_Open_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Seoul_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Seoul_Open_2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Seoul_Open_2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Seoul_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Seoul_Open_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Seoul_Open_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Seoul_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Seoul_Open_2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Seoul_Open_2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Seoul_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Seoul_Open_2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Seoul_Open_2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Seoul_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Seoul_Open_2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Seoul_Open_2015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Seoul_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Seoul_Open_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Seoul_Open_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Seoul_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Seoul_Open_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Seoul_Open_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Seoul_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Shanghai_Masters_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Shanghai_Masters_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Shanghai_Masters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Shanghai_Masters_2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Shanghai_Masters_2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Shanghai_Masters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Shanghai_Masters_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Shanghai_Masters_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Shanghai_Masters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Shanghai_Masters_2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Shanghai_Masters_2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Shanghai_Masters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Shanghai_Masters_2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Shanghai_Masters_2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Shanghai_Masters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Shanghai_Masters_2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Shanghai_Masters_2015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Shanghai_Masters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Shanghai_Masters_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Shanghai_Masters_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Shanghai_Masters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Shanghai_Masters_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Shanghai_Masters_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Shanghai_Masters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Strasbourg_Open_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Strasbourg_Open_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Strasbourg_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Strasbourg_Open_2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Strasbourg_Open_2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Strasbourg_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Strasbourg_Open_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Strasbourg_Open_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Strasbourg_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Strasbourg_Open_2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Strasbourg_Open_2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Strasbourg_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Strasbourg_Open_2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Strasbourg_Open_2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Strasbourg_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Strasbourg_Open_2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Strasbourg_Open_2015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Strasbourg_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Strasbourg_Open_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Strasbourg_Open_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Strasbourg_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Strasbourg_Open_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Strasbourg_Open_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Strasbourg_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Stuttgart_Open_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Stuttgart_Open_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Stuttgart_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Stuttgart_Open_2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Stuttgart_Open_2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Stuttgart_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Stuttgart_Open_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Stuttgart_Open_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Stuttgart_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Stuttgart_Open_2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Stuttgart_Open_2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Stuttgart_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Stuttgart_Open_2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Stuttgart_Open_2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Stuttgart_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Stuttgart_Open_2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Stuttgart_Open_2015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Stuttgart_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Stuttgart_Open_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Stuttgart_Open_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Stuttgart_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Stuttgart_Open_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Stuttgart_Open_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Stuttgart_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sydney_Open_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sydney_Open_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sydney_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sydney_Open_2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sydney_Open_2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sydney_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sydney_Open_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sydney_Open_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sydney_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sydney_Open_2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sydney_Open_2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sydney_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sydney_Open_2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sydney_Open_2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sydney_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sydney_Open_2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sydney_Open_2015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sydney_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sydney_Open_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sydney_Open_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sydney_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sydney_Open_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sydney_Open_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sydney_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tokyo_Open_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tokyo_Open_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tokyo_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tokyo_Open_2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tokyo_Open_2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tokyo_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tokyo_Open_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tokyo_Open_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tokyo_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tokyo_Open_2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tokyo_Open_2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tokyo_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tokyo_Open_2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tokyo_Open_2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tokyo_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tokyo_Open_2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tokyo_Open_2015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tokyo_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tokyo_Open_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tokyo_Open_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tokyo_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tokyo_Open_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tokyo_Open_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tokyo_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Toronto_Montreal_Open_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Toronto_Montreal_Open_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Toronto_Montreal_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Toronto_Montreal_Open_2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Toronto_Montreal_Open_2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Toronto_Montreal_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Toronto_Montreal_Open_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Toronto_Montreal_Open_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Toronto_Montreal_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Toronto_Montreal_Open_2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Toronto_Montreal_Open_2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Toronto_Montreal_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Toronto_Montreal_Open_2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Toronto_Montreal_Open_2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Toronto_Montreal_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Toronto_Montreal_Open_2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Toronto_Montreal_Open_2015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Toronto_Montreal_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Toronto_Montreal_Open_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Toronto_Montreal_Open_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Toronto_Montreal_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Toronto_Montreal_Open_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Toronto_Montreal_Open_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Toronto_Montreal_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#US_Open_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#US_Open_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#US_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#US_Open_2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#US_Open_2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#US_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#US_Open_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#US_Open_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#US_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#US_Open_2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#US_Open_2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#US_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#US_Open_2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#US_Open_2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#US_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#US_Open_2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#US_Open_2015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#US_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#US_Open_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#US_Open_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#US_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#US_Open_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#US_Open_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#US_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Vienna_Open_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Vienna_Open_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Vienna_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Vienna_Open_2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Vienna_Open_2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Vienna_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Vienna_Open_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Vienna_Open_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Vienna_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Vienna_Open_2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Vienna_Open_2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Vienna_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Vienna_Open_2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Vienna_Open_2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Vienna_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Vienna_Open_2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Vienna_Open_2015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Vienna_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Vienna_Open_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Vienna_Open_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Vienna_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Vienna_Open_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Vienna_Open_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Vienna_Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Wimbledon_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Wimbledon_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Wimbledon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Wimbledon_2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Wimbledon_2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Wimbledon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Wimbledon_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Wimbledon_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Wimbledon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Wimbledon_2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Wimbledon_2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Wimbledon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Wimbledon_2014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Wimbledon_2014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Wimbledon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Wimbledon_2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Wimbledon_2015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Wimbledon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Wimbledon_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Wimbledon_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Wimbledon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Wimbledon_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Wimbledon_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Wimbledon"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
