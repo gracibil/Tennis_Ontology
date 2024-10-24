@@ -1,0 +1,449 @@
+@prefix : <http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#> .
+
+<http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasParticipant
+:hasParticipant rdf:type owl:ObjectProperty ;
+                owl:inverseOf :participatesIn ;
+                rdfs:domain :Tournaments ;
+                rdfs:range :Players .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#isSponsoredBy
+:isSponsoredBy rdf:type owl:ObjectProperty ;
+               owl:inverseOf :sponsors ;
+               rdfs:domain :Tournaments ;
+               rdfs:range :Sponsorship .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#participatesIn
+:participatesIn rdf:type owl:ObjectProperty ;
+                rdfs:domain :Players ;
+                rdfs:range :Tournaments .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#sponsors
+:sponsors rdf:type owl:ObjectProperty ;
+          rdfs:domain :Sponsorship ;
+          rdfs:range :Tournaments .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasBirthdate
+:hasBirthdate rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Players ;
+              rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasCarreerWinnings
+:hasCarreerWinnings rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Players ;
+                    rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasFemaleFinalViewership
+:hasFemaleFinalViewership rdf:type owl:DatatypeProperty ;
+                          rdfs:domain :Grand_Slams ,
+                                      :Masters ,
+                                      :WTA_500 ;
+                          rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasFemaleFinalsAttendance
+:hasFemaleFinalsAttendance rdf:type owl:DatatypeProperty ;
+                           rdfs:subPropertyOf :hasFinalsAttendance ;
+                           rdfs:domain :Tournaments ;
+                           rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasFemalePrizePool
+:hasFemalePrizePool rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :hasTotalPrizePool ;
+                    rdfs:domain :Grand_Slams ,
+                                :Masters ,
+                                :WTA_500 ;
+                    rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasFemaleWinnerPrize
+:hasFemaleWinnerPrize rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf :hasFemalePrizePool ;
+                      rdfs:domain :Grand_Slams ,
+                                  :Masters ,
+                                  :WTA_500 ;
+                      rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasFinalsAttendance
+:hasFinalsAttendance rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :hasTotalAttendance ;
+                     rdfs:domain :Tournaments ;
+                     rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasGender
+:hasGender rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Players ;
+           rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasHeight
+:hasHeight rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Players ;
+           rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasLevel
+:hasLevel rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Tournaments ;
+          rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasMaleFinalViewership
+:hasMaleFinalViewership rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :ATP_500 ,
+                                    :Grand_Slams ,
+                                    :Masters ;
+                        rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasMaleFinalsAttendance
+:hasMaleFinalsAttendance rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf :hasFinalsAttendance ;
+                         rdfs:domain :Tournaments ;
+                         rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasMalePrizePool
+:hasMalePrizePool rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :hasTotalPrizePool ;
+                  rdfs:domain :ATP_500 ,
+                              :Grand_Slams ,
+                              :Masters ;
+                  rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasMaleWinnerPrize
+:hasMaleWinnerPrize rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :hasMalePrizePool ;
+                    rdfs:domain :ATP_500 ,
+                                :Grand_Slams ,
+                                :Masters ;
+                    rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasSponsorshipAmount
+:hasSponsorshipAmount rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :Minor_Sponsors ,
+                                  :Official_Sponsor ,
+                                  :Sponsorship ,
+                                  :Title_Sponsor ;
+                      rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasTotalAttendance
+:hasTotalAttendance rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Tournaments ;
+                    rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasTotalPrizePool
+:hasTotalPrizePool rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Tournaments ;
+                   rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#hasWikidataId
+:hasWikidataId rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Players ;
+               rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#inYear
+:inYear rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Tournaments ;
+        rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#isFemaleTournament
+:isFemaleTournament rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Grand_Slams ,
+                                :Masters ,
+                                :WTA_500 ;
+                    rdfs:range xsd:boolean ;
+                    owl:propertyDisjointWith :isMaleTournament .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#isMaleTournament
+:isMaleTournament rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :ATP_500 ,
+                              :Grand_Slams ,
+                              :Masters ;
+                  rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#isMixedTournament
+:isMixedTournament rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Grand_Slams ,
+                               :Masters ;
+                   rdfs:range xsd:boolean .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#ATP_500
+:ATP_500 rdf:type owl:Class ;
+         rdfs:subClassOf :Tournaments .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Acapulco
+:Acapulco rdf:type owl:Class ;
+          rdfs:subClassOf :ATP_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Australian_Open
+:Australian_Open rdf:type owl:Class ;
+                 rdfs:subClassOf :Grand_Slams .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Barcelona_Open
+:Barcelona_Open rdf:type owl:Class ;
+                rdfs:subClassOf :ATP_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Basel_Open
+:Basel_Open rdf:type owl:Class ;
+            rdfs:subClassOf :ATP_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Beijing_Open
+:Beijing_Open rdf:type owl:Class ;
+              rdfs:subClassOf :ATP_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Brisbane_Open
+:Brisbane_Open rdf:type owl:Class ;
+               rdfs:subClassOf :WTA_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Charleston_Open
+:Charleston_Open rdf:type owl:Class ;
+                 rdfs:subClassOf :WTA_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Cincinnati_Open
+:Cincinnati_Open rdf:type owl:Class ;
+                 rdfs:subClassOf :Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Dubai_Duty_Free_Open
+:Dubai_Duty_Free_Open rdf:type owl:Class ;
+                      rdfs:subClassOf :ATP_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Eastborne_Open
+:Eastborne_Open rdf:type owl:Class ;
+                rdfs:subClassOf :WTA_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Female_Player
+:Female_Player rdf:type owl:Class ;
+               rdfs:subClassOf :Players ;
+               owl:disjointWith :Male_Player .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Grand_Slams
+:Grand_Slams rdf:type owl:Class ;
+             rdfs:subClassOf :Tournaments .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Halle_Open
+:Halle_Open rdf:type owl:Class ;
+            rdfs:subClassOf :ATP_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Hamburg_Open
+:Hamburg_Open rdf:type owl:Class ;
+              rdfs:subClassOf :ATP_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Indian_Wells_Open
+:Indian_Wells_Open rdf:type owl:Class ;
+                   rdfs:subClassOf :Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#London_Open
+:London_Open rdf:type owl:Class ;
+             rdfs:subClassOf :ATP_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Madrid_Open
+:Madrid_Open rdf:type owl:Class ;
+             rdfs:subClassOf :Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Male_Player
+:Male_Player rdf:type owl:Class ;
+             rdfs:subClassOf :Players .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Masters
+:Masters rdf:type owl:Class ;
+         rdfs:subClassOf :Tournaments .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Miami_Open
+:Miami_Open rdf:type owl:Class ;
+            rdfs:subClassOf :Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Minor_Sponsors
+:Minor_Sponsors rdf:type owl:Class ;
+                rdfs:subClassOf :Sponsorship .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monte_Carlo_Masters
+:Monte_Carlo_Masters rdf:type owl:Class ;
+                     rdfs:subClassOf :Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Monterrey_Open
+:Monterrey_Open rdf:type owl:Class ;
+                rdfs:subClassOf :WTA_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Moskow_Open
+:Moskow_Open rdf:type owl:Class ;
+             rdfs:subClassOf :WTA_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Ningbo_Open
+:Ningbo_Open rdf:type owl:Class ;
+             rdfs:subClassOf :WTA_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Official_Sponsor
+:Official_Sponsor rdf:type owl:Class ;
+                  rdfs:subClassOf :Sponsorship .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Paris_Masters
+:Paris_Masters rdf:type owl:Class ;
+               rdfs:subClassOf :Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Players
+:Players rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Qatar_Open
+:Qatar_Open rdf:type owl:Class ;
+            rdfs:subClassOf :Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rio_De_Janeiro
+:Rio_De_Janeiro rdf:type owl:Class ;
+                rdfs:subClassOf :ATP_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Roland_Garros
+:Roland_Garros rdf:type owl:Class ;
+               rdfs:subClassOf :Grand_Slams .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rome_Open
+:Rome_Open rdf:type owl:Class ;
+           rdfs:subClassOf :Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Rotterdam_Open
+:Rotterdam_Open rdf:type owl:Class ;
+                rdfs:subClassOf :ATP_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Seoul_Open
+:Seoul_Open rdf:type owl:Class ;
+            rdfs:subClassOf :WTA_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Shanghai_Masters
+:Shanghai_Masters rdf:type owl:Class ;
+                  rdfs:subClassOf :Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sponsorship
+:Sponsorship rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Strasbourg_Open
+:Strasbourg_Open rdf:type owl:Class ;
+                 rdfs:subClassOf :WTA_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Stuttgart_Open
+:Stuttgart_Open rdf:type owl:Class ;
+                rdfs:subClassOf :WTA_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Sydney_Open
+:Sydney_Open rdf:type owl:Class ;
+             rdfs:subClassOf :WTA_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Title_Sponsor
+:Title_Sponsor rdf:type owl:Class ;
+               rdfs:subClassOf :Sponsorship .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tokyo_Open
+:Tokyo_Open rdf:type owl:Class ;
+            rdfs:subClassOf :WTA_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Toronto_Montreal_Open
+:Toronto_Montreal_Open rdf:type owl:Class ;
+                       rdfs:subClassOf :Masters .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Tournaments
+:Tournaments rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#US_Open
+:US_Open rdf:type owl:Class ;
+         rdfs:subClassOf :Grand_Slams .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Vienna_Open
+:Vienna_Open rdf:type owl:Class ;
+             rdfs:subClassOf :ATP_500 .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#WTA_500
+:WTA_500 rdf:type owl:Class ;
+         rdfs:subClassOf :Tournaments .
+
+
+###  http://www.semanticweb.org/edmondagabekian/ontologies/2024/9/untitled-ontology-13#Wimbledon
+:Wimbledon rdf:type owl:Class ;
+           rdfs:subClassOf :Grand_Slams .
+
+
+#################################################################
+#    Individuals
+#################################################################
